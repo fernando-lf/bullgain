@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "MontserratRegular";
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: "MontserratMedium";
+  src: url(../fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: "MontserratSemiBold";
+  src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "MontserratBold";
+  src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+#menuToggle {
+  display: none;
+  position: relative;
+  float: left;
+  /* background-color: #DBC35D; */
+  background-color: rgba(219, 195, 93, 0.98);
+  padding: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  z-index: 1;
+  opacity: 0.9;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle #menuT a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: "MontserratBold";
+  transition: color 0.3s ease;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuT {
+  position: absolute;
+  width: 300px;
+  margin: -42px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  /* background-color: #DBC35D; */
+  background-color: rgba(219, 195, 93, 0.98);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuT li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+/* Dropdown */
+
+.dropdown-btn {
+  font-family: "MontserratBold";
+  padding: 5px 0;
+  text-decoration: none;
+  font-size: 1.4em;
+  color: #FFFFFF;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.dropdown-btn i {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: url(../icons/caretDown.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+
+.dropdown-container {
+  display: none;
+  background-color: transparent;
+  padding-left: 30px;
+}
+
+.dropdown-container a {
+  display: block;
+  margin: 10px 0;
+}
+
+@media (max-width: 800px) {
+  #menuToggle {
+    display: block;
+  }
+}
+
+/* ---- */
+
+/* Animation with X (close) */
+
+/* #menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+} */

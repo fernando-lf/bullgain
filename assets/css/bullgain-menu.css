@@ -1,0 +1,145 @@
+@font-face {
+    font-family: "MontserratRegular";
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: "MontserratMedium";
+    src: url(../fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+    font-family: "MontserratSemiBold";
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+@font-face {
+    font-family: "MontserratBold";
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+
+body {
+    background-color: #181818;
+	overflow: auto;
+	height: 100%;
+}
+
+
+#logo{
+   float: left;
+   margin: 0;
+   padding: 0;
+}
+
+#logoM{
+    display: none;
+}
+	
+.menu{
+	width:100%;
+	height:40px;
+	}
+	
+.menu>ul{
+	list-style:none;	
+	position:relative;
+	margin-left:50px;
+	}
+.menu ul li{
+		width:150px;
+		float:left;
+	}
+
+.menu a{
+	padding:10px;
+	display:block;
+	text-decoration: none;
+	text-align:center;
+    color: #FFFFFF;
+	font-family: "MontserratRegular";
+	font-size: 1em;
+	}
+.menu ul ul{
+	list-style:none;
+	position:absolute;
+	visibility:hidden;
+	
+	}
+.menu ul li:hover ul{
+	visibility:visible;
+	padding: 0;
+	}
+	
+.menu a:hover{
+     border-bottom: solid #fff 3px;   
+	}
+
+.menu ul ul li{
+	float:none;
+	}
+
+#bt_menu{
+	display: none;
+	}
+
+#lgn{
+    border: solid #FFFFFF 1px;
+    border-radius: 10px;   
+}
+
+#acc{    
+    border: solid #DBC35D 1px;
+    border-radius: 10px;
+    background-color: #DBC35D;   
+	float: right;
+}
+
+
+
+@media (max-width: 800px) {
+#lgn, #acc{
+    display: none;
+}
+
+#logo{
+    display: none;
+}
+
+#logoM{
+    display: block;
+    width: 50%;
+    margin: 20px 100px;
+}
+
+.menu{
+	margin-left:-100%;
+	transition:all .4s;
+	}
+label[for='bt_menu']{
+	display:block;
+    float: left;
+	}
+.menu>ul{
+	margin-left:0;
+    background-color: #DBC35D;
+    opacity: 40%;
+    
+	}
+.menu{
+	margin-top:5px;
+	}
+.menu ul li{
+	width:100%;
+	float:none;
+	}
+.menu ul ul{
+	position:static;
+	max-height:0;
+	transition:all .4s;
+	}
+.menu ul li:hover ul{
+	height:auto;
+	max-height:200px;
+	transition:all .4s;
+	}
+#bt_menu:checked ~ .menu{
+	margin-left:0;
+	}
+}
