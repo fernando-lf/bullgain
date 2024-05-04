@@ -1,7 +1,7 @@
 # Bullgain Exchange
 A Bullgain Exchange é uma empresa comercial e baseada em moeda digital.
 
-# Site institucional
+## Site institucional
 O site institucional da Bullgain Exchange foi desenvolvido utilizando a linguagem PHP juntamente com as tecnologias HTML, CSS e JS.
 
 ## Página inicial
